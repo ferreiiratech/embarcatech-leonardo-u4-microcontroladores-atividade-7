@@ -57,22 +57,22 @@ int main() {
     init_pin_pwm_config(GPIO_PIN_LED, PWM_DIVISER, WRAP_PERIOD);
 
     // Move o servo para 180°
-    pwm_set_gpio_level(GPIO_PIN_LED, (POSITION_SERVO_180 * WRAP_PERIOD) / 20000);
+    pwm_set_gpio_level(GPIO_PIN_SERVO, (POSITION_SERVO_180 * WRAP_PERIOD) / 20000);
     sleep_ms(TIME_DELAY_5000);
 
     // Move o servo para 90°
-    pwm_set_gpio_level(GPIO_PIN_LED, (POSITION_SERVO_90 * WRAP_PERIOD) / 20000);
+    pwm_set_gpio_level(GPIO_PIN_SERVO, (POSITION_SERVO_90 * WRAP_PERIOD) / 20000);
     sleep_ms(TIME_DELAY_5000);
 
     // Move o servo para 0°
-    pwm_set_gpio_level(GPIO_PIN_LED, (POSITION_SERVO_0 * WRAP_PERIOD) / 20000);
+    pwm_set_gpio_level(GPIO_PIN_SERVO, (POSITION_SERVO_0 * WRAP_PERIOD) / 20000);
     sleep_ms(TIME_DELAY_5000);
 
     while (true) {
         // Movimenta o servo suavemente entre 0° e 180°
         // Pode ser modificado para adicionar o pino do led e fazer o led piscar
-        move_smoothly(GPIO_PIN_LED, POSITION_SERVO_0, POSITION_SERVO_180, STEP, TIME_DELAY_10);
-        move_smoothly(GPIO_PIN_LED, POSITION_SERVO_180, POSITION_SERVO_0, STEP, TIME_DELAY_10);
+        move_smoothly(GPIO_PIN_SERVO, POSITION_SERVO_0, POSITION_SERVO_180, STEP, TIME_DELAY_10);
+        move_smoothly(GPIO_PIN_SERVO, POSITION_SERVO_180, POSITION_SERVO_0, STEP, TIME_DELAY_10);
     }
 
     return 0;
