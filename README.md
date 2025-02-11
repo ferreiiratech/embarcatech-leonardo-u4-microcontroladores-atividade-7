@@ -45,6 +45,9 @@ Para rodar este projeto, você precisará de:
 5. Clique no botão denominado "run" no Visual Studio Code para carregar o firmware na placa.
 6. A placa executará automaticamente o firmware.
 
+## Vídeo de apresentação
+Link: 
+
 ## Autor
 Leonardo Ferreira Lima
 
